@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  border: 1px solid #070707;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 8px;
+}
+
+td {
+  text-align: center;
+  border: 1px solid #070707;
+  padding: 8px;
+}
+
+button {
+  background-color: #4097ad;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
