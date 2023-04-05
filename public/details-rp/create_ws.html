@@ -439,7 +439,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>Automation Test Report!</h1>
-    <p>Report generated on 04-Apr-2023 at 10:50:10 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 05-Apr-2023 at 15:22:35 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -455,8 +455,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.8.10</td></tr></table>
     <h2>Summary</h2>
-    <p>8 tests ran in 137.78 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">6 passed</span>, <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">4 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>2 tests ran in 13.83 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -467,145 +467,29 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_save_worksheet_after_upload</td>
-          <td class="col-duration">30.32</td>
-          <td class="col-links"><a class="url" href="http://worksheetzone.org/" target="_blank">URL</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div><div>Additional HTML</div></div>
-            <div class="log">self = &lt;testcases.CreateWorksheet.test_function.TestCreateWs object at 0x7feb940d8880&gt;<br/><br/>    def test_save_worksheet_after_upload(self):<br/>        try:<br/>            self.home_page = HomePage(self.driver)<br/>            self.home_page.login()<br/>            assert self.home_page.is_page_loaded()<br/>            self.logger.info(&quot;********* Home page ***********&quot;)<br/>        except Exception as e:<br/>            self.logger.error(f&#x27;{e}&#x27;)<br/>            pytest.fail(&quot;******** Cannot open Home Page *********&quot;)<br/>    <br/>        self.create_ws_page = self.home_page.get_started()<br/>        self.logger.info(&quot;******** Create Page **********&quot;)<br/>        self.create_ws_page.switchTab(1)<br/>&gt;       self.create_ws_page.upload_file()<br/><br/>../../PycharmProjects/pythonProject/testcases/CreateWorksheet/test_function.py:28: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>pages/CreateWorksheetPage.py:67: in upload_file<br/>    WebDriverWait(self.driver, 20).until(<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.support.wait.WebDriverWait (session=&quot;09d6e5c871684b8ad2c6acfa70e93238&quot;)&gt;<br/>method = &lt;function visibility_of_element_located.&lt;locals&gt;._predicate at 0x7feb931f8c10&gt;<br/>message = &#x27;&#x27;<br/><br/>    def until(self, method, message: str = &quot;&quot;):<br/>        &quot;&quot;&quot;Calls the method provided with the driver as an argument until the \<br/>        return value does not evaluate to ``False``.<br/>    <br/>        :param method: callable(WebDriver)<br/>        :param message: optional message for :exc:`TimeoutException`<br/>        :returns: the result of the last call to `method`<br/>        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs<br/>        &quot;&quot;&quot;<br/>        screen = None<br/>        stacktrace = None<br/>    <br/>        end_time = time.monotonic() + self._timeout<br/>        while True:<br/>            try:<br/>                value = method(self._driver)<br/>                if value:<br/>                    return value<br/>            except self._ignored_exceptions as exc:<br/>                screen = getattr(exc, &quot;screen&quot;, None)<br/>                stacktrace = getattr(exc, &quot;stacktrace&quot;, None)<br/>            time.sleep(self._poll)<br/>            if time.monotonic() &gt; end_time:<br/>                break<br/>&gt;       raise TimeoutException(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.TimeoutException: Message: </span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       #0 0x558443afd683 &lt;unknown&gt;</span><br/><span class="error">E       #1 0x5584438d06c6 &lt;unknown&gt;</span><br/><span class="error">E       #2 0x55844390c8d8 &lt;unknown&gt;</span><br/><span class="error">E       #3 0x55844390c9e1 &lt;unknown&gt;</span><br/><span class="error">E       #4 0x558443947914 &lt;unknown&gt;</span><br/><span class="error">E       #5 0x55844392cfdd &lt;unknown&gt;</span><br/><span class="error">E       #6 0x558443945479 &lt;unknown&gt;</span><br/><span class="error">E       #7 0x55844392cd83 &lt;unknown&gt;</span><br/><span class="error">E       #8 0x5584438ffd38 &lt;unknown&gt;</span><br/><span class="error">E       #9 0x558443900e6e &lt;unknown&gt;</span><br/><span class="error">E       #10 0x558443b4a9c6 &lt;unknown&gt;</span><br/><span class="error">E       #11 0x558443b4dbe3 &lt;unknown&gt;</span><br/><span class="error">E       #12 0x558443b4e46a &lt;unknown&gt;</span><br/><span class="error">E       #13 0x558443b33d0e &lt;unknown&gt;</span><br/><span class="error">E       #14 0x558443b4ebfc &lt;unknown&gt;</span><br/><span class="error">E       #15 0x558443b25428 &lt;unknown&gt;</span><br/><span class="error">E       #16 0x558443b6e818 &lt;unknown&gt;</span><br/><span class="error">E       #17 0x558443b6e9bf &lt;unknown&gt;</span><br/><span class="error">E       #18 0x558443b88e84 &lt;unknown&gt;</span><br/><span class="error">E       #19 0x7fc047fe8609 &lt;unknown&gt;</span><br/><br/>../../PycharmProjects/pythonProject/venv/lib/python3.8/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_function.py:20 ********* Home page ***********
-INFO     root:test_function.py:26 ******** Create Page **********<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_save_ws_template</td>
-          <td class="col-duration">32.78</td>
-          <td class="col-links"><a class="url" href="http://worksheetzone.org/" target="_blank">URL</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div><div>Additional HTML</div></div>
-            <div class="log">self = &lt;testcases.CreateWorksheet.test_function.TestCreateWs object at 0x7feb940d8a00&gt;<br/><br/>    def test_save_ws_template(self):<br/>        home_page = HomePage(self.driver)<br/>        self.logger.info(&quot;****** Homepage ********&quot;)<br/>        home_page.login()<br/>        self.logger.info(&quot;******** Login **********&quot;)<br/>    <br/>        self.create_ws_page = home_page.get_started()<br/>        self.logger.info(&quot;*******  Create Ws Page **********&quot;)<br/>        self.create_ws_page.switchTab(1)<br/>    <br/>        self.create_ws_page.pick_a_template()<br/>        self.logger.info(&quot;****** Pick a template *******&quot;)<br/>    <br/>        self.create_ws_page.click_red_save_button()<br/>        self.logger.info(&quot;********** Save ********&quot;)<br/>        ##<br/>        try:<br/>            assert bool(self.create_ws_page.get_save_pop_up())<br/>        except Exception:<br/>            pytest.fail(&quot;******** Save pop up not found *********&quot;)<br/>    <br/>        self.create_ws_page.input_ws_name()<br/>        self.logger.info(&quot;******* Fill pop up ********&quot;)<br/>    <br/>        self.create_ws_page.click_blue_save_button()<br/>        self.logger.info(&quot;******* Save ******&quot;)<br/>        # Test<br/>        try:<br/>&gt;           self.create_ws_page.get_shared_popup()<br/><br/>../../PycharmProjects/pythonProject/testcases/CreateWorksheet/test_function.py:76: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;pages.CreateWorksheetPage.CreateWorksheetPage object at 0x7feb93108520&gt;<br/><br/>    def get_shared_popup(self):<br/>&gt;       return WebDriverWait(self.driver, 20).until(<br/>            EC.visibility_of_element_located(self.SHARE_POPUP_CONTAINER)<br/>        )<br/><br/>pages/CreateWorksheetPage.py:105: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.support.wait.WebDriverWait (session=&quot;329b8528715426e0ee924c62a071c9e8&quot;)&gt;<br/>method = &lt;function visibility_of_element_located.&lt;locals&gt;._predicate at 0x7feb9311a1f0&gt;<br/>message = &#x27;&#x27;<br/><br/>    def until(self, method, message: str = &quot;&quot;):<br/>        &quot;&quot;&quot;Calls the method provided with the driver as an argument until the \<br/>        return value does not evaluate to ``False``.<br/>    <br/>        :param method: callable(WebDriver)<br/>        :param message: optional message for :exc:`TimeoutException`<br/>        :returns: the result of the last call to `method`<br/>        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs<br/>        &quot;&quot;&quot;<br/>        screen = None<br/>        stacktrace = None<br/>    <br/>        end_time = time.monotonic() + self._timeout<br/>        while True:<br/>            try:<br/>                value = method(self._driver)<br/>                if value:<br/>                    return value<br/>            except self._ignored_exceptions as exc:<br/>                screen = getattr(exc, &quot;screen&quot;, None)<br/>                stacktrace = getattr(exc, &quot;stacktrace&quot;, None)<br/>            time.sleep(self._poll)<br/>            if time.monotonic() &gt; end_time:<br/>                break<br/>&gt;       raise TimeoutException(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.TimeoutException: Message: </span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       #0 0x564413f2b683 &lt;unknown&gt;</span><br/><span class="error">E       #1 0x564413cfe6c6 &lt;unknown&gt;</span><br/><span class="error">E       #2 0x564413d3a8d8 &lt;unknown&gt;</span><br/><span class="error">E       #3 0x564413d3a9e1 &lt;unknown&gt;</span><br/><span class="error">E       #4 0x564413d75914 &lt;unknown&gt;</span><br/><span class="error">E       #5 0x564413d5afdd &lt;unknown&gt;</span><br/><span class="error">E       #6 0x564413d73479 &lt;unknown&gt;</span><br/><span class="error">E       #7 0x564413d5ad83 &lt;unknown&gt;</span><br/><span class="error">E       #8 0x564413d2dd38 &lt;unknown&gt;</span><br/><span class="error">E       #9 0x564413d2ee6e &lt;unknown&gt;</span><br/><span class="error">E       #10 0x564413f789c6 &lt;unknown&gt;</span><br/><span class="error">E       #11 0x564413f7bbe3 &lt;unknown&gt;</span><br/><span class="error">E       #12 0x564413f7c46a &lt;unknown&gt;</span><br/><span class="error">E       #13 0x564413f61d0e &lt;unknown&gt;</span><br/><span class="error">E       #14 0x564413f7cbfc &lt;unknown&gt;</span><br/><span class="error">E       #15 0x564413f53428 &lt;unknown&gt;</span><br/><span class="error">E       #16 0x564413f9c818 &lt;unknown&gt;</span><br/><span class="error">E       #17 0x564413f9c9bf &lt;unknown&gt;</span><br/><span class="error">E       #18 0x564413fb6e84 &lt;unknown&gt;</span><br/><span class="error">E       #19 0x7fd56668a609 &lt;unknown&gt;</span><br/><br/>../../PycharmProjects/pythonProject/venv/lib/python3.8/site-packages/selenium/webdriver/support/wait.py:95: TimeoutException<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>self = &lt;testcases.CreateWorksheet.test_function.TestCreateWs object at 0x7feb940d8a00&gt;<br/><br/>    def test_save_ws_template(self):<br/>        home_page = HomePage(self.driver)<br/>        self.logger.info(&quot;****** Homepage ********&quot;)<br/>        home_page.login()<br/>        self.logger.info(&quot;******** Login **********&quot;)<br/>    <br/>        self.create_ws_page = home_page.get_started()<br/>        self.logger.info(&quot;*******  Create Ws Page **********&quot;)<br/>        self.create_ws_page.switchTab(1)<br/>    <br/>        self.create_ws_page.pick_a_template()<br/>        self.logger.info(&quot;****** Pick a template *******&quot;)<br/>    <br/>        self.create_ws_page.click_red_save_button()<br/>        self.logger.info(&quot;********** Save ********&quot;)<br/>        ##<br/>        try:<br/>            assert bool(self.create_ws_page.get_save_pop_up())<br/>        except Exception:<br/>            pytest.fail(&quot;******** Save pop up not found *********&quot;)<br/>    <br/>        self.create_ws_page.input_ws_name()<br/>        self.logger.info(&quot;******* Fill pop up ********&quot;)<br/>    <br/>        self.create_ws_page.click_blue_save_button()<br/>        self.logger.info(&quot;******* Save ******&quot;)<br/>        # Test<br/>        try:<br/>            self.create_ws_page.get_shared_popup()<br/>        except Exception:<br/>&gt;           pytest.fail(&quot;******** Shared popup not found *********&quot;)<br/><span class="error">E           Failed: ******** Shared popup not found *********</span><br/><br/>../../PycharmProjects/pythonProject/testcases/CreateWorksheet/test_function.py:78: Failed<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_function.py:50 ****** Homepage ********
-INFO     root:test_function.py:52 ******** Login **********
-INFO     root:test_function.py:55 *******  Create Ws Page **********
-INFO     root:test_function.py:59 ****** Pick a template *******
-INFO     root:test_function.py:62 ********** Save ********
-INFO     root:test_function.py:70 ******* Fill pop up ********
-INFO     root:test_function.py:73 ******* Save ******<br/></div></td></tr></tbody>
-      <tbody class="skipped results-table-row">
-        <tr>
-          <td class="col-result">Skipped</td>
-          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_feed_back_pop_up_1</td>
-          <td class="col-duration">1.44</td>
-          <td class="col-links"><a class="url" href="http://worksheetzone.org/" target="_blank">URL</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">(&#x27;/home/tdhpisme/PycharmProjects/pythonProject/testcases/CreateWorksheet/test_function.py&#x27;, 176, &#x27;Skipped&#x27;)<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_function.py:175 ****** Test 008 ******<br/></div></td></tr></tbody>
-      <tbody class="skipped results-table-row">
-        <tr>
-          <td class="col-result">Skipped</td>
-          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_feed_back_pop_up_2</td>
-          <td class="col-duration">1.43</td>
-          <td class="col-links"><a class="url" href="http://worksheetzone.org/" target="_blank">URL</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">(&#x27;/home/tdhpisme/PycharmProjects/pythonProject/testcases/CreateWorksheet/test_function.py&#x27;, 186, &#x27;Skipped&#x27;)<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_function.py:185 ****** Test 009 ******<br/></div></td></tr></tbody>
-      <tbody class="skipped results-table-row">
-        <tr>
-          <td class="col-result">Skipped</td>
-          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_duplicate_page</td>
-          <td class="col-duration">1.46</td>
-          <td class="col-links"><a class="url" href="http://worksheetzone.org/" target="_blank">URL</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">(&#x27;/home/tdhpisme/PycharmProjects/pythonProject/testcases/CreateWorksheet/test_function.py&#x27;, 235, &#x27;Skipped&#x27;)<br/></div></td></tr></tbody>
-      <tbody class="skipped results-table-row">
-        <tr>
-          <td class="col-result">Skipped</td>
-          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_move_up_down</td>
-          <td class="col-duration">1.35</td>
-          <td class="col-links"><a class="url" href="http://worksheetzone.org/" target="_blank">URL</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">(&#x27;/home/tdhpisme/PycharmProjects/pythonProject/testcases/CreateWorksheet/test_function.py&#x27;, 239, &#x27;Skipped&#x27;)<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_save_blank_ws</td>
-          <td class="col-duration">7.68</td>
+          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_open_create_page_from_play</td>
+          <td class="col-duration">10.12</td>
           <td class="col-links"><a class="url" href="http://worksheetzone.org/" target="_blank">URL</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_function.py:83 ******* HomePage *********
-INFO     root:test_function.py:85 ******* Login ********
-INFO     root:test_function.py:88 ******* CreatePage ********
-INFO     root:test_function.py:92 ******** Save ********
-INFO     root:test_function.py:98 *******Test passed *******<br/></div></td></tr></tbody>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_function.py:18 ****** Test 002 *********
+INFO     root:test_function.py:20 ****** Play Page ******
+INFO     root:GameBase.py:132 **** Click customize icon *******
+INFO     root:GameBase.py:136 ***** Click customize button *****
+INFO     root:test_function.py:23 *****Create Page *****
+INFO     root:test_function.py:24 ***** Test passed ******<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_undo_redo</td>
-          <td class="col-duration">16.18</td>
+          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_open_create_page_from_preview</td>
+          <td class="col-duration">3.66</td>
           <td class="col-links"><a class="url" href="http://worksheetzone.org/" target="_blank">URL</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_function.py:101 ********** Test 004, 005 *********
-INFO     root:test_function.py:103 ********** Home Page*********
-INFO     root:test_function.py:108 ********** Pick a template *********
-INFO     root:test_function.py:118 ********** Undo *********
-INFO     root:test_function.py:128 ********** Redo *********
-INFO     root:test_function.py:136 ***** Test passed *******<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_zoom</td>
-          <td class="col-duration">7.32</td>
-          <td class="col-links"><a class="url" href="http://worksheetzone.org/" target="_blank">URL</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_function.py:139 ****** Test 006 *****
-INFO     root:test_function.py:141 ********* Home Page *****
-INFO     root:test_function.py:144 ******* Create Page ******
-INFO     root:test_function.py:147 ****** Zoom out *******
-INFO     root:test_function.py:160 ******* Zoom in *******
-INFO     root:test_function.py:168 ******* Test passed ******<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_add_page_with_button</td>
-          <td class="col-duration">12.17</td>
-          <td class="col-links"><a class="url" href="http://worksheetzone.org/" target="_blank">URL</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_function.py:194 ***** Test 015 *****
-INFO     root:test_function.py:196 ******* Home Page *******
-INFO     root:test_function.py:201 ****** Create Page ******
-INFO     root:test_function.py:205 ********* Add Page ********
-INFO     root:test_function.py:212 ******* Test passed *****<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_add_page_with_icon</td>
-          <td class="col-duration">12.74</td>
-          <td class="col-links"><a class="url" href="http://worksheetzone.org/" target="_blank">URL</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_function.py:216 ****** Test 016 *****
-INFO     root:test_function.py:218 ******* Home Page *****
-INFO     root:test_function.py:222 **** Create Page *****
-INFO     root:test_function.py:232 ******* Test passed *****<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">testcases/CreateWorksheet/test_function.py::TestCreateWs::test_scroll_to_top</td>
-          <td class="col-duration">12.73</td>
-          <td class="col-links"><a class="url" href="http://worksheetzone.org/" target="_blank">URL</a> </td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_function.py:243 ******** Test 020 **********
-INFO     root:test_function.py:246 ********* Create Page *******
-INFO     root:test_function.py:249 ********* Scroll to bottom *****
-INFO     root:test_function.py:258 ******** Click up-arrow button ******
-INFO     root:test_function.py:265 **** Test Passed *****<br/></div></td></tr></tbody></table></body></html>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     root:test_function.py:27 ****** Test 003 *********
+INFO     root:test_function.py:30 ****** Preview Page ******
+INFO     root:test_function.py:32 *****Create Page *****
+INFO     root:test_function.py:33 ***** Test passed ******<br/></div></td></tr></tbody></table></body></html>
